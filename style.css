@@ -1,0 +1,100 @@
+/* style.css */
+
+body {
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden; /* CRITICAL: Prevents horizontal scrolling */
+    width: 100vw; /* Ensures the body adheres to the viewport width */
+    position: relative; /* Good practice for z-index and positioned children */
+    min-width: 0; /* Ensures the body can shrink, preventing overflow in some cases */
+}
+
+/* Universal box-sizing and min-width for better responsiveness and overflow prevention */
+/* This is a strong defensive rule to prevent any element from causing overflow */
+* {
+    box-sizing: border-box;
+    min-width: 0; /* Allows elements to shrink below their content size if needed */
+}
+
+/* Ensure all images and embedded content are responsive and don't cause overflow */
+img, video, iframe {
+    max-width: 100%; /* CRITICAL: Prevents media from overflowing their containers */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Helps prevent extra space below images and treats them as block elements */
+}
+
+/* Custom scroll-reveal animation classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.slide-in-left.appear {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.slide-in-right.appear {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Specific styles for the image carousel to ensure proper sliding and containment */
+.carousel-item {
+    flex-shrink: 0; /* Prevent items from shrinking */
+    width: 100%; /* Each item takes full width of the carousel container */
+    max-width: 100%; /* Defensive: ensures content within item doesn't push it out */
+}
+
+#carousel {
+    display: flex;
+    /* No extra padding/margin here to prevent subtle overflows */
+    padding: 0;
+    margin: 0;
+}
+
+/* Ensure container max-width works correctly with padding */
+.container {
+    max-width: 100%; /* Explicitly cap containers to 100% of parent/viewport */
+    /* Tailwind's px-4 (padding-left: 1rem, padding-right: 1rem) handles internal spacing. */
+    /* Ensure the `box-sizing: border-box;` from the universal rule is effective here. */
+}
+
+/* Specific considerations for fixed headers/footers or modals to prevent overflow */
+header {
+    width: 100%; /* Ensure fixed header adheres to viewport width */
+    z-index: 100; /* Higher than other content to stay on top */
+    /* box-sizing: border-box; applied by universal rule */
+}
+
+#booking-modal {
+    /* box-sizing: border-box; applied by universal rule */
+    padding: 1rem; /* Add some padding to the modal overlay if content inside is too wide */
+}
+
+#booking-modal > div { /* The inner white modal box */
+    /* box-sizing: border-box; applied by universal rule */
+    max-width: 100%; /* Ensure the modal content itself doesn't exceed its defined width */
+}
+
+/* --- SCROLLING OFFSET FOR FIXED HEADER --- */
+/* Apply scroll-margin-top to all sections that are targets of navigation links */
+/* This pushes the target section down so its heading is visible below the fixed header */
+section {
+    scroll-margin-top: 6rem; /* Adjust this value based on your fixed header's actual height */
+                            /* 6rem (96px) should provide sufficient clearance */
+}

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegance Salon & Spa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow-md py-4 fixed w-full z-50">
+        <nav class="container mx-auto flex justify-between items-center px-4">
+            <a href="#hero" class="text-3xl font-bold text-pink-600 rounded-md p-2 hover:text-pink-700 transition duration-300">Elegance Salon</a>
+
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none focus:ring-2 focus:ring-pink-500 rounded-md p-2">
+                <i id="mobile-menu-icon" class="fas fa-bars text-2xl"></i>
+            </button>
+
+            <ul id="nav-links" class="hidden md:flex space-x-6 items-center">
+                <li><a href="#hero" class="text-gray-700 hover:text-pink-600 font-medium transition duration-300 rounded-md p-2">Home</a></li>
+                <li><a href="#services" class="text-gray-700 hover:text-pink-600 font-medium transition duration-300 rounded-md p-2">Services</a></li>
+                <li><a href="#gallery" class="text-gray-700 hover:text-pink-600 font-medium transition duration-300 rounded-md p-2">Gallery</a></li>
+                <li><a href="#about" class="text-gray-700 hover:text-pink-600 font-medium transition duration-300 rounded-md p-2">About Us</a></li>
+                <li><a href="#contact" class="text-gray-700 hover:text-pink-600 font-medium transition duration-300 rounded-md p-2">Contact</a></li>
+                <li>
+                    <button id="book-now-btn" class="bg-pink-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-pink-700 transition duration-300 shadow-lg">Book slot</button>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="mobile-menu" class="md:hidden hidden bg-white py-4 shadow-inner">
+            <ul class="flex flex-col items-center space-y-4 w-full">
+                <li><a href="#hero" class="text-gray-700 hover:text-pink-600 font-medium transition duration-300 rounded-md p-2 w-full text-center block">Home</a></li>
+                <li><a href="#services" class="text-gray-700 hover:text-pink-600 font-medium transition duration-300 rounded-md p-2 w-full text-center block">Services</a></li>
+                <li><a href="#gallery" class="text-gray-700 hover:text-pink-600 font-medium transition duration-300 rounded-md p-2 w-full text-center block">Gallery</a></li>
+                <li><a href="#about" class="text-gray-700 hover:text-pink-600 font-medium transition duration-300 rounded-md p-2 w-full text-center block">About Us</a></li>
+                <li><a href="#contact" class="text-gray-700 hover:text-pink-600 font-medium transition duration-300 rounded-md p-2 w-full text-center block">Contact</a></li>
+                <li>
+                    <button id="book-now-mobile-btn" class="bg-pink-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-pink-700 transition duration-300 shadow-lg w-full max-w-[200px] mx-auto">Book slot</button>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="relative bg-cover bg-center h-screen flex items-center justify-center text-white" style="background-image: url('1.jpg');">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div class="relative z-10 text-center p-6 rounded-lg bg-black bg-opacity-40 max-w-2xl mx-auto fade-in">
+                <h1 class="text-5xl md:text-6xl font-bold mb-4 leading-tight">Experience Unmatched Beauty & Relaxation</h1>
+                <p class="text-lg md:text-xl mb-8">Your sanctuary for exquisite hair, nail, and spa treatments. Let us pamper you.</p>
+                <button id="hero-book-btn" class="bg-pink-600 text-white px-8 py-3 rounded-full text-xl font-semibold hover:bg-pink-700 transition duration-300 shadow-xl transform hover:scale-105">Book Now</button>
+            </div>
+        </section>
+
+        <section id="about" class="py-16 bg-white">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 fade-in slide-in-left">
+                    <img src="ab.jpg" alt="Elegance Salon Interior" class="rounded-xl shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2 text-center md:text-left fade-in slide-in-right">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">About Elegance Salon</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        At Elegance Salon, we believe in bringing out the best in you. With years of experience and a passion for beauty, our skilled team is dedicated to providing personalized services that leave you feeling refreshed, confident, and truly elegant.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        We use only the highest quality products and the latest techniques to ensure every visit is a luxurious and satisfying experience. Your beauty is our masterpiece.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-12 fade-in">Our Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 fade-in">
+                        <i class="fas fa-cut text-5xl text-pink-600 mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Hair Styling & Cuts</h3>
+                        <p class="text-gray-700">From classic cuts to modern styles, our expert stylists will craft the perfect look for you. Includes wash, cut, and blow-dry.</p>
+                        <p class="text-pink-600 font-bold mt-4">Starting from $50</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 fade-in">
+                        <i class="fas fa-palette text-5xl text-pink-600 mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Color & Highlights</h3>
+                        <p class="text-gray-700">Transform your hair with vibrant colors, subtle highlights, or a complete color correction by our color specialists.</p>
+                        <p class="text-pink-600 font-bold mt-4">Starting from $80</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 fade-in">
+                        <i class="fas fa-spa text-5xl text-pink-600 mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Spa Treatments</h3>
+                        <p class="text-gray-700">Indulge in relaxing facials, rejuvenating massages, and soothing body treatments for ultimate relaxation.</p>
+                        <p class="text-pink-600 font-bold mt-4">Starting from $75</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 fade-in">
+                        <i class="fas fa-hand-sparkles text-5xl text-pink-600 mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Manicure & Pedicure</h3>
+                        <p class="text-gray-700">Pamper your hands and feet with our luxurious manicures and pedicures, including gel and acrylic options.</p>
+                        <p class="text-pink-600 font-bold mt-4">Starting from $35</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 fade-in">
+                        <i class="fas fa-eyelashes text-5xl text-pink-600 mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Lash & Brow Services</h3>
+                        <p class="text-gray-700">Enhance your natural beauty with professional lash extensions, lifts, tints, and brow shaping.</p>
+                        <p class="text-pink-600 font-bold mt-4">Starting from $60</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 fade-in">
+                        <i class="fas fa-hot-tub text-5xl text-pink-600 mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Waxing & Hair Removal</h3>
+                        <p class="text-gray-700">Smooth and gentle waxing services for face and body, ensuring a comfortable and effective hair removal experience.</p>
+                        <p class="text-pink-600 font-bold mt-4">Starting from $25</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-12 fade-in">Our Work Gallery</h2>
+                <div class="relative w-full max-w-4xl mx-auto rounded-xl shadow-xl overflow-hidden">
+                    <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
+                        <div class="carousel-item min-w-full">
+                            <img src="11.jpg" alt="Hair Style 1" class="w-full h-auto object-cover rounded-xl">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 p-4 text-white text-center">
+                            </div>
+                        </div>
+                        <div class="carousel-item min-w-full">
+                            <img src="5.jpg" alt="Nail Art 2" class="w-full h-auto object-cover rounded-xl">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 p-4 text-white text-center">
+                            </div>
+                        </div>
+                        <div class="carousel-item min-w-full">
+                            <img src="6.jpg" alt="Spa Treatment 3" class="w-full h-auto object-cover rounded-xl">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 p-4 text-white text-center">
+                            </div>
+                        </div>
+                        <div class="carousel-item min-w-full">
+                            <img src="4.jpg" alt="Hair Color 4" class="w-full h-auto object-cover rounded-xl">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 p-4 text-white text-center">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="prev-btn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 transition duration-300 focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button id="next-btn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 transition duration-300 focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-12 fade-in">What Our Clients Say</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg fade-in">
+                        <div class="flex items-center mb-4">
+                            <img src="https://placehold.co/60x60/FFCDD2/333333?text=JD" alt="Client Avatar" class="w-16 h-16 rounded-full mr-4 object-cover">
+                            <div>
+                                <p class="font-semibold text-lg text-gray-900">Jane Doe</p>
+                                <div class="text-yellow-500">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 italic">"Elegance Salon truly lives up to its name! My hair has never looked better, and the spa treatment was incredibly relaxing. The staff is so professional and friendly."</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg fade-in">
+                        <div class="flex items-center mb-4">
+                            <img src="https://placehold.co/60x60/F06292/FFFFFF?text=SM" alt="Client Avatar" class="w-16 h-16 rounded-full mr-4 object-cover">
+                            <div>
+                                <p class="font-semibold text-lg text-gray-900">Sarah M.</p>
+                                <div class="text-yellow-500">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 italic">"I always leave Elegance Salon feeling amazing. Their nail technicians are meticulous, and the atmosphere is so calming. Highly recommend their pedicure!"</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg fade-in">
+                        <div class="flex items-center mb-4">
+                            <img src="https://placehold.co/60x60/E57373/FFFFFF?text=RB" alt="Client Avatar" class="w-16 h-16 rounded-full mr-4 object-cover">
+                            <div>
+                                <p class="font-semibold text-lg text-gray-900">Robert B.</p>
+                                <div class="text-yellow-500">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 italic">"Finally found a salon that understands men's grooming needs. The haircut was perfect, and the staff made me feel very comfortable. Will definitely be back!"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-12 fade-in">Get in Touch</h2>
+                <div class="flex flex-col md:flex-row gap-12 md:justify-start"> <div class="md:w-1/2 fade-in slide-in-left">
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <input type="text" id="name" name="name" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-pink-500" placeholder="Your Name" required>
+                            </div>
+                            <div>
+                                <input type="email" id="email" name="email" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-pink-500" placeholder="Your Email Address" required>
+                            </div>
+                            <div>
+                                <textarea id="message" name="message" rows="6" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-pink-500" placeholder="Your message..." required></textarea>
+                            </div>
+                            <div class="flex justify-center">
+                                <button type="submit" class="bg-pink-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-pink-700 transition duration-300 shadow-lg transform hover:scale-105">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="md:w-1/2 fade-in slide-in-right">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-6">Visit Us</h3>
+                        <p class="text-gray-700 mb-4"><i class="fas fa-map-marker-alt text-pink-600 mr-3"></i>Ekiti State, Nigeria</p>
+                        <p class="text-700 mb-4"><i class="fas fa-phone-alt text-pink-600 mr-3"></i>(+81) 084-64205</p>
+                        <p class="text-gray-700 mb-6"><i class="fas fa-envelope text-pink-600 mr-3"></i>elegancesalon56@gmail.com</p>
+                        <div class="bg-gray-200 rounded-xl overflow-hidden shadow-lg" style="height: 300px;">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15809.91929312154!2d5.210000000000001!3d7.666666666666667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10486c12b7a7f45b%3A0x867b3f9d519b5d4e!2sEkiti%20State%2C%20Nigeria!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-gray-400 hover:text-pink-600 transition duration-300"><i class="fab fa-facebook-f text-2xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-pink-600 transition duration-300"><i class="fab fa-instagram text-2xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-pink-600 transition duration-300"><i class="fab fa-twitter text-2xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-pink-600 transition duration-300"><i class="fab fa-pinterest-p text-2xl"></i></a>
+            </div>
+            <p class="text-gray-400">© 2025 Elegance Salon. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="booking-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-8 rounded-xl shadow-2xl max-w-md w-full relative">
+            <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl focus:outline-none">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3 class="text-3xl font-bold text-gray-900 mb-6 text-center">Book Your Appointment</h3>
+            <p class="text-gray-700 mb-6 text-center">
+                Thank you for choosing Elegance Salon! Please call us or visit our salon to book your appointment.
+                Online booking coming soon!
+            </p>
+            <div class="text-center">
+                <p class="text-pink-600 font-semibold text-xl mb-2"><i class="fas fa-phone-alt mr-2"></i>(+81) 084-64205</p>
+                <p class="text-pink-600 font-semibold text-xl"><i class="fas fa-envelope mr-2"></i>elegancesalon56@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
